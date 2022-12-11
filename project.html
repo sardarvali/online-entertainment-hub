@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Entertainment Hub</title>
+    <link rel="Icon" href="logo.png">
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        background-color: black;
+    }
+    #navbar{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        
+    }
+    #navbar::before{
+        content: "";
+        background-color: black;
+       
+    }
+    #logo{
+        margin: 40px 50px;
+
+    }
+    #logo img{
+        height: 60px;
+        margin: 3px 6px;
+
+    }
+    ul{
+            display: flex;
+    }
+    ul li{
+        list-style: none;
+        font-size: 1.8rem;
+    }
+    ul li a{
+
+        display: block;
+        color: white;
+        border-radius: 20px;
+        padding: 3px 44px;
+        text-decoration: none;
+    }
+    ul li a:hover{
+        cursor: pointer;
+        color: black;
+        background-color: white;
+
+    }
+    #home{
+        
+       
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 511px;
+    justify-content: center;
+    align-items: center;
+
+      }
+      .h-primary {
+    font-size: 3rem;
+    padding: 12px;
+    color: maroon;
+    margin: 110px;
+      }
+    #home::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+       opacity: 0.4;
+       /* z-index: 0.90;  */
+        background: url(entertainment1.png) no-repeat center center/cover;
+    }
+    #table1{
+        font-size: 45px;
+        color: white;
+        margin: 50px 350px 10px;
+        padding: 20px;
+    }
+    #hd1{
+        font-size: 85px;
+        color: maroon;
+        margin: 50px 41px;
+    }
+    #clients{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+
+    }
+    #client-section{
+       
+    
+       
+        border: 1px solid rgb(65, 29, 52);
+
+    }
+    .p-primary{
+        align-items: center;
+        justify-content: center;
+        margin: 24px 600px;
+        color: white;
+       
+    }
+    .client-item img{
+        height: 44px;
+        padding: 25px;
+        
+    }
+    .table2{
+        font-size: 45px;
+        color: white;
+        margin: 50px 350px 10px;
+        padding: 20px;
+    }
+    
+    
+    
+        
+    th{
+        padding: 10px;
+        column-gap: 5px;
+        margin: 5px;
+        color: blueviolet;
+    
+    }
+    tr{
+        padding: 15px;
+        color: darkslategray;
+        margin: 5px;
+        row-gap: 10px;
+        rotate: left;
+    }
+    tr:hover{
+        cursor: pointer;
+        color: blue;
+        contain: layout;
+    }
+    th:hover{
+        cursor: pointer;
+        color: yellow;
+    }
+    td{
+        color: grey;
+        list-style: none    ;
+    }
+    td:hover{
+        color: rebeccapurple;
+        cursor: pointer;
+    
+    }
+    .content{
+        border: 1px solid rgb(3, 3, 3);
+
+    }
+    .content audio{
+        margin: 55px;
+    }
+
+
+   
+    
+
+
+</style>
+<body>
+    <nav id="navbar" class="navbar">
+        <div id="logo" class="logo1"><img src="logo.png" alt="oeh"></div>
+      
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">New movies</a></li>
+            <li class="item"><a href="#">TV Shows</a></li>
+            <li class="item"><a href="contant us.html">contant us</a></li>
+            <li class="item"><a href="loginpage.html">Sign in</a></li>
+        </ul>
+
+    </nav>
+    <section id="home" class="home center"><h1 class="h-primary">Welcome</h1></section>
+    <div class="table" id="table1">
+          
+    <table border="1">
+        
+        <thead>
+            <tr id="t1" class="head">
+                <th colspan="4">Online entertainment Hub</th>
+                
+            </tr>
+            <tr class="head" id="t2">
+                <th>Games</th>
+                <th>Education</th>
+                <th>New Episodes</th>
+                <th>News</th>
+            </trw
+        </thead>
+        <tbody>
+
+            <tr id="t3" class="body">
+                <td><a href="https://poki.com/">click here</a></td>
+                <td><a href="https://www.lpu.in/">Click Here</a></td>
+                <td><a href="https://www.netflix.com/browse">Click here</a></td>
+                <td><a href="https://news.google.com/">Click Here</a></td>
+            </tr>
+
+        </tbody>
+    </table>
+    </div>
+    <div class="content" id="content">
+        <h1 id="hd1">Popular on hub</h1>
+        <div class="table2">
+
+   
+            <table border="1">
+            
+                <thead>
+                    
+                    <tr class="head" id="t2">
+                        <th>Documenteries</th>
+                        <th>Lesson</th>
+                        <th>Seasons</th>
+                        <th>Stories</th>
+                    </trw
+                </thead>
+                <tbody>
+        
+                    <tr id="t3" class="body">
+                        <td colspan="4"><a href="#">click here</a></td>
+                       
+                    </tr>
+        
+                </tbody>
+            </table>
+        </div>
+        <audio src="music.mp3" controls></audio>
+        <video src="#"></video>
+
+    </div>
+  <section id="client-section">
+    <h1 class="p-primary"> Ours Parntership</h1>
+    <div id="clients">
+        <div class="client-item">
+            <img src="facebooklogo.png" alt="Refresh">
+            <img src="twitterlogo.ong.png" alt="Refresh">
+            <img src="googlelogo.png" alt="Refresh">
+
+        </div>
+    </div>
+
+</section>
+    
+</body>
+</html>

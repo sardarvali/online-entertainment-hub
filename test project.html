@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Entertainment Hub</title>
+    <link rel="Icon" href="logo.png">
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        background-color: black;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .navbar {
+        overflow: hidden;
+        
+       
+    }
+
+    #navbar {
+        display: flex;
+        position: absolute;
+        align-items: center;
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.7;
+    }
+   
+    #logo {
+        margin: 40px 50px;
+    }
+
+    #logo img {
+        height: 60px;
+        margin: 3px 6px;
+    }
+
+    #navbar ul li {
+        list-style: none;
+        font-size: 1.3rem;
+    }
+
+    ul li {
+        list-style: none;
+        font-size: 1.8rem;
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .navbar ul li a,
+        .navbar input[type=text] {
+            float: none;
+            display: block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px;
+        }
+
+        .navbar input[type=text] {
+            border: 1px solid #ccc;
+        }
+    }
+
+    #navbar ul {
+        display: flex;
+    }
+
+    #navbar ul li a:hover {
+        color: black;
+        background-color: white;
+    }
+
+    ul li a {
+
+        display: block;
+        color: white;
+        border-radius: 20px;
+        padding: 3px 44px;
+        text-decoration: none;
+        float: left;
+        text-align: center;
+    }
+
+    ul li a:hover {
+        cursor: pointer;
+        color: black;
+        background-color: white;
+    }
+
+    ul li a:active {
+        cursor: pointer;
+        color: white;
+    }
+
+    @media screen and (max-width: 600px) {
+        .navbar ul li a:not(:first-child) {
+            display: none;
+        }
+
+        .navbar ul li a.icon {
+            float: right;
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar.responsive {
+                position: relative;
+            }
+
+            .navbar.responsive div.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+    }
+
+    .navbar input[type=text] {
+        float: right;
+        padding: 6px;
+        border: none;
+        margin-top: 8px;
+        margin-right: 16px;
+        font-size: 17px;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        height: 511px;
+        justify-content: center;
+        align-items: center;
+    }
+  
+
+    .h-primary {
+        font-size: 3rem;
+        padding: 12px;
+        color: maroon;
+        margin: 110px;
+    }
+
+    #home::before {
+        content: "";
+        /* position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: 0.4;
+        z-index: 0.90;
+        background: url(entertainment1.png) no-repeat center center/cover; */
+    }
+
+    #table1 {
+        font-size: 45px;
+        color: white;
+        margin: 50px 350px 10px;
+        padding: 20px;
+    }
+
+    #hd1 {
+        font-size: 85px;
+        color: maroon;
+        margin: 50px 41px;
+    }
+
+    #clients {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #client-section {
+        border: 1px solid rgb(65, 29, 52);
+    }
+
+    .p-primary {
+        align-items: center;
+        justify-content: center;
+        margin: 24px 600px;
+        color: white;
+    }
+
+    .client-item img {
+        height: 44px;
+        padding: 25px;
+    }
+
+    .table2 {
+        font-size: 45px;
+        color: white;
+        margin: 50px 350px 10px;
+        padding: 20px;
+    }
+
+    th {
+        padding: 10px;
+        column-gap: 5px;
+        margin: 5px;
+        color: blueviolet;
+    }
+
+    tr {
+        padding: 15px;
+        color: darkslategray;
+        margin: 5px;
+        row-gap: 10px;
+        rotate: left;
+    }
+
+    tr:hover {
+        cursor: pointer;
+        color: blue;
+        contain: layout;
+    }
+
+    th:hover {
+        cursor: pointer;
+        color: yellow;
+    }
+
+    td {
+        color: grey;
+        list-style: none;
+    }
+
+    td:hover {
+        color: rebeccapurple;
+        cursor: pointer;
+    }
+
+    footer {
+        background: black;
+        color: white;
+        padding: 9px 20px;
+    }
+    .image img{ 
+   height: 80px;
+   margin: auto;
+   display: block;
+}
+.hello1{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(entertainment1.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+        z-index: 0.90;
+}
+
+</style>
+
+<body style="background-color: rgba(94, 95, 93, 0.233);">
+    <div class="hello1">
+    <nav id="navbar" class="navbar">
+        <div id="logo" class="logo1"><img src="logo.png" alt="oeh"></div>
+        <ul>
+            <li class="item"><a href="#"> Home</a></li>
+            <li class="item"><a href="#">New movies</a></li>
+            <li class="item"><a href="#">TV Shows</a></li>
+            <li class="item"><a href="contant us.html">contant us</a></li>
+            <li class="item"><a href="loginpage.html">Sign in</a></li>
+            <input type="text" placeholder="Search..">
+        </ul>
+
+    </nav>
+</div>
+    <section id="home" class="home center">
+        <h1 class="h-primary">Welcome</h1>
+    </section>
+    <div class="table" id="table1">
+
+        <table border="1">
+
+            <thead>
+                <tr id="t1" class="head">
+                    <th colspan="4">Online entertainment Hub</th>
+
+                </tr>
+                <tr class="head" id="t2">
+                    <th>Games</th>
+                    <th>Education</th>
+                    <th>New Episodes</th>
+                    <th>News</th>
+                    </trw </thead>
+            <tbody>
+
+                <tr id="t3" class="body">
+                    <td><a href="https://poki.com/">
+                        <div class="image"><img src="game1.png" alt="Refresh"></div><br>
+                        <div class="image"><img src="game2.png" alt="Refresh"></div>
+                        Click Here
+                    </a></td>
+                    <td><a href="https://www.lpu.in/">
+                        <div class="image"><img src="education.png" alt="Refresh"></div><br>
+                        <div class="image"><img src="lpu.png" alt="Refresh"></div>
+                        Click Here</a></td>
+                    <td><a href="https://www.netflix.com/browse">
+                        <div class="image"><img src="webseries.png" alt="Refresh"></div><br>
+                        <div class="image"><img src="movie.png" alt="Refresh"></div>
+                        Click here</a></td>
+                    <td><a href="https://news.google.com/">
+                        <div class="image"><img src="news.png" alt="Refresh"></div>
+                        Click Here</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="content" id="content">
+        <h1 id="hd1">Popular on hub</h1>
+        <div class="table2">
+
+
+            <table border="1">
+
+                <thead>
+
+                    <tr class="head" id="t2">
+                        <th>Documenteries</th>
+                        <th>Lesson</th>
+                        <th>Seasons</th>
+                        <th>Stories</th>
+                        </trw </thead>
+                <tbody>
+
+                    <tr id="t3" class="body">
+                        <td colspan="4"><a href="#">click here</a></td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <audio src="music.mp3" controls></audio>
+        <video src="#"></video>
+
+    </div>
+    <div class="frame">
+    <iframe width="420" height="315" src="project video.mp4">
+    </iframe>
+</div>
+    <section id="client-section">
+        <h1 class="p-primary"> Ours Parntership</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="facebooklogo.png" alt="Refresh">
+                <img src="twitterlogo.ong.png" alt="Refresh">
+                <img src="googlelogo.png" alt="Refresh">
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.onlineenterainmenthub.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("navbar");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+
+</script>
